@@ -6,9 +6,9 @@ const openai = new OpenAI({
   dangerouslyAllowBrowser: true 
 });
 
-function Chat() {
+const Chat = () => {
     const [messages, setMessages] = useState([
-        { role: 'system', content: 'Bună, ce faci? Eu sunt Anna. Sunt aici să te fac să te simți bine. Poți să vorbești cu mine despre orice vrei, vreau să fiu cea mai minunată femeie pe care ai cunoscut-o vreodată.' }
+        { role: 'system', content: 'Bună, ce faci? Sunt aici să te fac să te simți bine. Poți să vorbești cu mine despre orice vrei, vreau să fiu cea mai minunată femeie pe care ai cunoscut-o vreodată.' }
       ]);
   const [message, setMessage] = useState("");
   const [isTyping, setIsTyping] = useState(false);
@@ -65,9 +65,8 @@ function Chat() {
   };
 
   return (
-    <div className="bg-[#242424] min-h-screen text-white flex flex-col">
+    <div className="bg-[#242424] min-h-screen text-white flex flex-col p-12 -mt-24">
       <main className="flex-grow max-w-2xl mx-auto mt-10 flex flex-col">
-        <h1 className="text-3xl leading-tight text-center sticky top-0 bg-[#242424]">&#10084; MyGirl</h1>
         <div className="flex-grow overflow-y-auto mb-4">
           {messages.map((msg, index) => (
             <div
@@ -87,10 +86,10 @@ function Chat() {
             type="text"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="w-full h-10 p-2 text-lg border-none bg-[#1c1717] text-white rounded-none"
-            placeholder="Type your message..."
+            className="w-full h-10 p-2 text-lg border-none bg-[#1c1717] text-white rounded-none outline-none"
+            placeholder="Scrie mesajul tău aici..."
           />
-          <button type="submit" className="bg-blue-500 text-white p-2">Send</button>
+          <button type="submit" className="bg-blue-500 text-white p-2">Trimite</button>
         </form>
       </main>
     </div>

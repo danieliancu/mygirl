@@ -1,3 +1,4 @@
+/* Stilurile de bază și utilitare Tailwind */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -23,13 +24,14 @@ html, body {
   scroll-behavior: smooth;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  background-color: #242424;
+body {
+ background-image: url('https://cursuri.net/it/openai/background.jpg');
+ background-color: black;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
 main {
@@ -40,4 +42,41 @@ main {
 form {
   position: sticky;
   bottom: 0;
+}
+
+nav li a {
+  padding: 5px;
+}
+
+.girl-front {
+  width: 105%;
+  top: -350px;
+  height: auto;
+  position: relative;
+}
+
+.word-scroller {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.word-scroller h1 {
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.word-scroller .scroll-up {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .girl-front {
+    top:-200px;
+  }
 }
