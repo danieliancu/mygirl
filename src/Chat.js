@@ -65,7 +65,7 @@ const Chat = () => {
   };
 
   return (
-    <div className="bg-[#242424] min-h-screen text-white flex flex-col p-12 -mt-24">
+    <div className="bg-[#242424] min-h-screen text-white flex flex-col p-4 pt-12 md:p-12">
       <main className="flex-grow max-w-2xl mx-auto mt-10 flex flex-col">
         <div className="flex-grow overflow-y-auto mb-4">
           {messages.map((msg, index) => (

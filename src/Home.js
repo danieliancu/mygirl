@@ -50,7 +50,7 @@ const Home = () => {
     <div className="container max-w-screen-xl flex justify-between items-center p-0 md:p-7 m-0 md:mx-auto h-auto lg:h-600">
       
       <div className="w-full p-4 md:p-0 md:w-1/2 text-center md:text-left overflow-hidden md:overflow-visible">
-        <h2 className="font-black text-4xl">Voi fi pentru tine o</h2>
+        <h2 className="font-black text-2xl md:text-4xl">Voi fi pentru tine o</h2>
         <div style={{"height":"110px"}}>
           <h1 className={`p-4 md:p-0 font-black text-6xl md:text-8xl pb-2.5 ${isScrolling ? 'scroll-up' : ''}`}>
             {words[currentWordIndex].slice(0, currentLetterIndex)}
