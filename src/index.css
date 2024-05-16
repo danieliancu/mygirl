@@ -80,3 +80,71 @@ nav li a {
     top:-200px;
   }
 }
+
+.container-girl-front {
+  bottom:-100px;
+}
+
+@media screen and (max-width: 1024px) {
+  .container-girl-front {
+    bottom:-40px;
+  }
+}
+
+
+/* Adaugă aceste clase în fișierul tău CSS */
+.girl-front {
+  transition: none; /* Dezactivează tranzițiile predefinite */
+}
+
+.slide-out-left {
+  animation: slideOutLeft 0.5s forwards;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.5s forwards;
+}
+
+.slide-out-right {
+  animation: slideOutRight 0.5s forwards;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.5s forwards;
+}
+
+@keyframes slideOutLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
